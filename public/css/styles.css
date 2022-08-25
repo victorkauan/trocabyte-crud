@@ -28,6 +28,10 @@ input.btn-trocabyte:hover {
     border-color: var(--trocabyte-main);
 }
 
+#delete-button {
+    display: inline-block;
+}
+
 /* === Navigation bar === */
 nav #navbar .navbar-brand {
     color: var(--trocabyte-main);

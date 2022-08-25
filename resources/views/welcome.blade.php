@@ -9,7 +9,7 @@
         <table class="table table-hover mt-2">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col">CPF</th>
                     <th scope="col">E-mail</th>
@@ -31,7 +31,16 @@
                         <td>{{ date('d/m/Y', strtotime($user->created_at)) }}</td>
                         <td>
                             <a href="#">Editar</a>
-                            <a href="#">Deletar</a>
+                            <form id="delete-button" action="/users/{{ $user->id }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <a
+                                    href="/users/{{ $user->id }}"
+                                    onclick="event.preventDefault(); this.closest('form').submit();"    
+                                >
+                                    Deletar
+                                </a>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
