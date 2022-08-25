@@ -27,10 +27,10 @@
                     </a>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Users</a>
+                            <a href="/" class="nav-link">Usuários</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Create user</a>
+                            <a href="#" class="nav-link">Criar usuário</a>
                         </li>
                     </ul>
                 </div>
@@ -38,7 +38,7 @@
         </header>
         <main>
             <div class="container-fluid">
-                <div class="row">
+                <div class="row px-5">
                     @yield('content')
                 </div>
             </div>
