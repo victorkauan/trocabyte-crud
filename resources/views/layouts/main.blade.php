@@ -19,6 +19,23 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     </head>
     <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light shadow-sm">
+                <div id="navbar" class="collapse navbar-collapse mx-5">
+                    <a href="/" class="navbar-brand">
+                        <strong>TROCABYTE</strong>
+                    </a>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Create user</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         <main>
             <div class="container-fluid">
                 <div class="row">
