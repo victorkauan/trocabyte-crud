@@ -1,6 +1,7 @@
 /* === Global variables === */
 :root {
-    --trocabyte-main: #0E1348;
+    --trocabyte-default: #0E1348;
+    --trocabyte-dark: #07092c;
     --white: #fff;
 }
 
@@ -21,15 +22,14 @@ label {
 
 input.btn-trocabyte {
     color: var(--white);
-    background-color: var(--trocabyte-main);
-    transition: color 0.3s, background-color 0.3s, border-color 0.3s, font-weight 0.3s;
+    background-color: var(--trocabyte-default);
+    transition: background-color 0.3s;
 }
 
 input.btn-trocabyte:hover {
-    color: var(--trocabyte-main);
-    font-weight: 700;
-    background-color: var(--white);
-    border-color: var(--trocabyte-main);
+    color: var(--white);
+    background-color: var(--trocabyte-dark);
+    border-color: var(--trocabyte-dark);
 }
 
 #delete-button {
@@ -42,7 +42,7 @@ nav #navbar .navbar-brand img {
 }
 
 nav #navbar .nav-item .nav-link {
-    color: var(--trocabyte-main);
+    color: var(--trocabyte-default);
     opacity: 0.75;
     transition: opacity 0.3s;
 }
@@ -56,7 +56,7 @@ footer {
     color: var(--white);
     text-align: center;
 
-    background-color: var(--trocabyte-main);
+    background-color: var(--trocabyte-default);
     width: 100%;
     padding: 30px;
 

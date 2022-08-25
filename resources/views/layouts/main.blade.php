@@ -44,7 +44,7 @@
         </header>
         <main>
             <div class="container-fluid">
-                <div class="row px-5">
+                <div class="row">
                     @if (session('msg'))
                         <p class="alert alert-success text-center">{{ session('msg') }}</p>
                     @endif
