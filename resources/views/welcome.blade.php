@@ -51,7 +51,7 @@
                         <td>{{ $formatted_phone }}</td>
                         <td>{{ date('d/m/Y', strtotime($user->created_at)) }}</td>
                         <td>
-                            <a href="#">Editar</a>
+                            <a href="/users/{{ $user->id }}">Editar</a>
                             <form id="delete-button" action="/users/{{ $user->id }}" method="POST">
                                 @csrf
                                 @method('DELETE')

@@ -37,4 +37,10 @@ class UserController extends Controller
 
         return redirect('/')->with('msg', 'Usuário deletado com sucesso!');
     }
+
+    public function edit($id) {
+        $user = User::findOrFail($id);
+
+        return view('users.edit', ['user' => $user]);
+    }
 }

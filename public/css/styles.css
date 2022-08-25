@@ -15,6 +15,10 @@ body {
     position: relative;
 }
 
+label {
+    font-weight: 700;
+}
+
 input.btn-trocabyte {
     color: var(--white);
     background-color: var(--trocabyte-main);
