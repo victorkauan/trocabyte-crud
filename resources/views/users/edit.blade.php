@@ -10,23 +10,23 @@
             @csrf
             @method('PUT')
             <div class="form-group">
-                <label for="name">Nome:</label>
+                <label for="name"><ion-icon name="person-outline"></ion-icon> Nome:</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Nome" value="{{ $user->name }}" required/>
             </div>
             <div class="form-group">
-                <label for="cpf">CPF:</label>
+                <label for="cpf"><ion-icon name="document-text-outline"></ion-icon> CPF:</label>
                 <input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF" value="{{ $user->cpf }}" required/>
             </div>
             <div class="form-group">
-                <label for="email">E-mail:</label>
+                <label for="email"><ion-icon name="mail-outline"></ion-icon> E-mail:</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" value="{{ $user->email }}" required/>
             </div>
             <div class="form-group">
-                <label for="address">Endereço:</label>
+                <label for="address"><ion-icon name="home-outline"></ion-icon> Endereço:</label>
                 <input type="text" class="form-control" id="address" name="address" placeholder="Endereço" value="{{ $user->address }}" required/>
             </div>
             <div class="form-group">
-                <label for="phone">Telefone:</label>
+                <label for="phone"><ion-icon name="call-outline"></ion-icon> Telefone:</label>
                 <input type="text" class="form-control" id="phone" name="phone" placeholder="Número de telefone" value={{ $user->phone }} required/>
             </div>
             <input type="submit" class="btn btn-trocabyte" value="Editar" />
