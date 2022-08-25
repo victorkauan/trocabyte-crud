@@ -6,7 +6,7 @@
     <div id="event-create-container" class="col-md-4 offset-md-4 mt-4">
         <h1 class="fs-3">Editar: {{ $user->name }} [ID: {{ $user->id }}]</h1>
 
-        <form action="/users/{{ $user->id }}" method="POST" class="d-flex flex-column gap-3">
+        <form action="/usuarios/atualizar/{{ $user->id }}" method="POST" class="d-flex flex-column gap-3">
             @csrf
             @method('PUT')
             <div class="form-group">

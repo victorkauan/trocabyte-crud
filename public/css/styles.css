@@ -32,6 +32,10 @@ input.btn-trocabyte:hover {
     border-color: var(--trocabyte-dark);
 }
 
+.nav-item {
+    font-weight: 700;
+}
+
 #delete-button {
     display: inline-block;
 }

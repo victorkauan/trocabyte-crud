@@ -6,7 +6,7 @@
     <div id="event-create-container" class="col-md-4 offset-md-4 mt-4">
         <h1 class="fs-3">Criar usuário</h1>
 
-        <form action="/register" method="POST" class="d-flex flex-column gap-3">
+        <form action="/usuarios/criar" method="POST" class="d-flex flex-column gap-3">
             @csrf
             <div class="form-group">
                 <label for="name">Nome:</label>

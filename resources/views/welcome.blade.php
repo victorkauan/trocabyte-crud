@@ -60,12 +60,12 @@
                             <td>{{ $formatted_phone }}</td>
                             <td>{{ date('d/m/Y', strtotime($user->created_at)) }}</td>
                             <td>
-                                <a href="/users/{{ $user->id }}" class="btn btn-primary edit-btn">Editar</a>
-                                <form id="delete-button" action="/users/{{ $user->id }}" method="POST">
+                                <a href="/usuarios/editar/{{ $user->id }}" class="btn btn-primary edit-btn">Editar</a>
+                                <form id="delete-button" action="/usuarios/deletar/{{ $user->id }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <a
-                                        href="/users/{{ $user->id }}"
+                                        href="/usuarios/deletar/{{ $user->id }}"
                                         onclick="event.preventDefault(); this.closest('form').submit();"
                                         class="btn btn-danger delete-btn"  
                                     >
@@ -78,7 +78,7 @@
                 </tbody>
             </table>
         @else
-            <p>Nenhum usuário registrado ainda. <a href="/register">Criar usuário</a></p>
+            <p>Nenhum usuário registrado ainda. <a href="/usuarios/registrar">Criar usuário</a></p>
         @endif
     </div>
 @endsection
