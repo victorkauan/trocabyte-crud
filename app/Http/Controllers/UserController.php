@@ -15,17 +15,17 @@ class UserController extends Controller
     }
 
     public function create() {
-        return view('user.create');
+        return view('users.create');
     }
 
     public function store(Request $request) {
         $user = new User;
 
         $user->name = $request->name;
-        $user->cpf = $request->cpf;
+        $user->cpf = preg_replace('/[^0-9]+/', '', $request->cpf);
         $user->email = $request->email;
         $user->address = $request->address;
-        $user->phone = $request->phone;
+        $user->phone = preg_replace('/[^0-9]+/', '', $request->phone);
 
         $user->save();
 
