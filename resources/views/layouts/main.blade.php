@@ -30,7 +30,7 @@
                             <a href="/" class="nav-link">Usuários</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Criar usuário</a>
+                            <a href="/register" class="nav-link">Criar usuário</a>
                         </li>
                     </ul>
                 </div>

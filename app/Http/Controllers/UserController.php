@@ -13,4 +13,8 @@ class UserController extends Controller
 
         return view('welcome', ['users' => $users]);
     }
+
+    public function create() {
+        return view('user.create');
+    }
 }
