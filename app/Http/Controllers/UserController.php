@@ -43,4 +43,15 @@ class UserController extends Controller
 
         return view('users.edit', ['user' => $user]);
     }
+
+    public function update(Request $request) {
+        $data = $request->all();
+        
+        $data['cpf'] = preg_replace('/[^0-9]+/', '', $request->cpf);
+        $data['phone'] = preg_replace('/[^0-9]+/', '', $request->phone);
+        
+        User::findOrFail($request->id)->update($data);
+
+        return redirect('/')->with('msg', 'Usuário editado com sucesso!');
+    }
 }

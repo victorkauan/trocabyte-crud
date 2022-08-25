@@ -9,3 +9,4 @@ Route::get('/register', [UserController::class, 'create']);
 Route::post('/register', [UserController::class, 'store']);
 Route::delete('/users/{id}', [UserController::class, 'destroy']);
 Route::get('/users/{id}', [UserController::class, 'edit']);
+Route::put('/users/{id}', [UserController::class, 'update']);

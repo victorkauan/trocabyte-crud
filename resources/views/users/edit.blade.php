@@ -6,8 +6,9 @@
     <div id="event-create-container" class="col-md-4 offset-md-4 mt-4">
         <h1 class="fs-3">Editar: {{ $user->name }} [ID: {{ $user->id }}]</h1>
 
-        <form action="/register" method="POST" class="d-flex flex-column gap-3">
+        <form action="/users/{{ $user->id }}" method="POST" class="d-flex flex-column gap-3">
             @csrf
+            @method('PUT')
             <div class="form-group">
                 <label for="name">Nome:</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Nome" value="{{ $user->name }}" required/>
