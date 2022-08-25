@@ -37,8 +37,8 @@ input.btn-trocabyte:hover {
 }
 
 /* === Navigation bar === */
-nav #navbar .navbar-brand {
-    color: var(--trocabyte-main);
+nav #navbar .navbar-brand img {
+    height: 50px;
 }
 
 nav #navbar .nav-item .nav-link {

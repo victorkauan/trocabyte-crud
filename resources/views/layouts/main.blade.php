@@ -6,6 +6,8 @@
 
         <title>@yield('title')</title>
 
+        <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +29,7 @@
             <nav class="navbar navbar-expand-md navbar-light shadow-sm">
                 <div id="navbar" class="collapse navbar-collapse mx-5">
                     <a href="/" class="navbar-brand">
-                        <strong>TROCABYTE</strong>
+                        <img src="/img/trocabyte-logo.png" alt="Logo da TROCABYTE">
                     </a>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
