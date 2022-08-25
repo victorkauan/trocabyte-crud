@@ -1,11 +1,18 @@
 /* === Global variables === */
 :root {
     --trocabyte-main: #0E1348;
+    --white: #fff;
 }
 
 /* === Global === */
 *, html, body {
     font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin-bottom: 100px;
+    position: relative;
 }
 
 /* === Navigation bar === */
@@ -21,4 +28,22 @@ nav #navbar .nav-item .nav-link {
 
 nav #navbar .nav-item .nav-link:hover {
     opacity: 1;
+}
+
+/* === Footer === */
+footer {
+    color: var(--white);
+    text-align: center;
+
+    background-color: var(--trocabyte-main);
+    width: 100%;
+    padding: 30px;
+
+    position: absolute;
+    bottom: 0;
+}
+
+footer a {
+    color: var(--white);
+    font-weight: 700;
 }
