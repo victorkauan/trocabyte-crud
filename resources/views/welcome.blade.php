@@ -6,12 +6,16 @@
     <div id="search-container" class="col-md-12 px-5 my-4">
         <h1 class="fs-3">Procurar por usuário(s)</h1>
         <form action="#" class="d-flex gap-2">
-            <input type="text" id="search" name="search" class="form-control" placeholder="Digite o nome do(s) usuário(s) que deseja encontrar..." />
+            <input type="text" id="search" name="search" class="form-control" placeholder="Digite o nome do(s) usuário(s) que deseja encontrar..." {{ $search ? "value=$search" : "" }} />
             <input type="submit" class="btn btn-trocabyte px-4" value="Buscar">
         </form>
     </div>
 
     <div id="user-container" class="col-md-12 px-5">
+        @if ($search)
+            <h2 class="fs-4">Procurando por: <strong>{{ $search }}</strong></h2>
+        @endif
+
         <h1 class="fs-3">Lista de usuários:</h1>
 
         @if (count($users))
@@ -77,7 +81,9 @@
                     @endforeach
                 </tbody>
             </table>
-        @else
+        @elseif (!count($users) && $search)
+            <p>Não existe nenhum usuário com <strong>{{ $search }}</strong> no nome. <a href="/">Ver todos os usuários</a></p>
+        @elseif (!count($users))
             <p>Nenhum usuário registrado ainda. <a href="/usuarios/registrar">Criar usuário</a></p>
         @endif
     </div>

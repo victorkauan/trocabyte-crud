@@ -8,16 +8,27 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    // Route: /
     public function index() {
-        $users = User::all();
+        $search = request('search');
 
-        return view('welcome', ['users' => $users]);
+        if ($search) {
+            $users = User::where([
+                ['name', 'like', '%' . $search . '%'],
+            ])->get();
+        } else {
+            $users = User::all();
+        }
+
+        return view('welcome', ['users' => $users, 'search' => $search]);
     }
 
+    // Route: /usuarios/registrar
     public function create() {
         return view('users.create');
     }
 
+    // Route: /usuarios/criar
     public function store(Request $request) {
         $user = new User;
 
@@ -32,18 +43,21 @@ class UserController extends Controller
         return redirect('/')->with('msg', 'Usuário criado com sucesso!');
     }
 
+    // Route: /usuarios/deletar/{id}
     public function destroy($id) {
         User::findOrFail($id)->delete();
 
         return redirect('/')->with('msg', 'Usuário deletado com sucesso!');
     }
 
+    // Route: /usuarios/editar/{id}
     public function edit($id) {
         $user = User::findOrFail($id);
 
         return view('users.edit', ['user' => $user]);
     }
 
+    // Route: /usuarios/atualizar/{id}
     public function update(Request $request) {
         $data = $request->all();
         
